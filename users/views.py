@@ -57,17 +57,16 @@ class LoginAPI(KnoxLoginView):
 class UserListView(generics.ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['category', 'in_stock']
+   
 
 
-class CustomSearchFilter(filters.SearchFilter):
-    def get_search_fields(self, view, request):
-        if request.query_params.get('title_only'):
-            return ['title']
-        return super(CustomSearchFilter, self).get_search_fields(view, request)
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+# class CustomSearchFilter(filters.SearchFilter):
+#     def get_search_fields(self, view, request):
+#         if request.query_params.get('title_only'):
+#             return ['title']
+#         return super(CustomSearchFilter, self).get_search_fields(view, request)
+#     queryset = User.objects.all()
+#     serializer_class = UserSerializer
     
     
     
@@ -113,16 +112,7 @@ class ChangePasswordView(generics.UpdateAPIView):
 class ProductList(generics.ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    filter_backends = [DjangoFilterBackend]
+    # filter_backends = [DjangoFilterBackend]
     filterset_fields = ['category', 'in_stock']
 
-
-class CustomSearchFilter(filters.SearchFilter):
-    def get_search_fields(self, view, request):
-        if request.query_params.get('title_only'):
-            return ['title']
-        return super(CustomSearchFilter, self).get_search_fields(view, request)
-
-# @api_view(['GET', 'POST', 'DELETE'])
-# def tutorial_list(request):
     
