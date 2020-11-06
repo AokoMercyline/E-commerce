@@ -6,15 +6,19 @@
 
 ## DESCRIPTION
 * This is a minimal REST API Django project for an online trading store.
-:satisfied:
+
 
 
 ## BEHAVIOUR DRIVEN DEVELOPMENT
+* User has to request for the endpoint inorder to access it
+* User can only access endpoint for Authentication
+* User has an option for login as an admin or user
 
-
+## KNOWN BUGS
+* User cannot acess the endpoints for products (on development process)
 
 ## Project live site
-  This is the live .[ Click for the demo]()
+  This is the live .[ Click for the demo](https://ecommercendpoint.herokuapp.com/)
  
 
 ## FEATURES
@@ -25,7 +29,9 @@
 * To access endpoint for profile
 - run this link https://ecommercendpoint.herokuapp.com/api/users/0/profile/
 * To access endpoint for change-password
-- run this link https://ecommercendpoint.herokuapp.com/api/change-password/
+- run this link https://ecommercendpoint.herokuapp.com/api/change-password/ 
+* To access admin endpoin
+- run this link https://ecommercendpoint.herokuapp.com/admin/login/?next=/admin/
 
 
 
