@@ -5,4 +5,4 @@
     * By AokoMercyline
 
 ## DESCRIPTION
-* This is an api 
+* This is a minimal REST API Django project for an online trading store.
